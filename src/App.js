@@ -19,30 +19,33 @@ function App() {
   }, []);
 
   const onClickHandler = (event) => {
-    const movieId = Number(event.target.parentElement.id);
+    const movieId = Number(event.target.id);
+    console.log(event.target);
     for (let movie of movies) {
       if (movie.id === movieId) setBuckets(buckets.add(movie));  
     }
-    console.log(buckets)
+    console.log(buckets.size)
   }
 
   // console.log(movieList[2]);
   return (
     <div className="App">
       {/* MovieList */}
-        {/* {movies.map(movie => {
-          return (
-            <div key={movie.id} onClick={onClickHandler} id={movie.id}>
-              <div>{movie.title}</div>
-              <div>{movie.original_title}</div>
-            </div>
-          );
-        })} */}
-      {/* BucketList */}
 
-      <MovieList movieList={movies}/>
-      {/* BucketList
-      <BucketList /> */}
+      <MovieList movieList={movies} onClickHandler={onClickHandler}/>
+      {/* BucketList */}
+      {if (buckets.size > 0) {
+        console.log(buckets.size);
+      }}
+      {buckets.map(bucket => {
+        console.log(bucket)
+        return (
+          <div>
+            <input type='checkbox'/>
+            <label>{bucket.title}</label>
+          </div>
+        );
+      })}
     </div>
   );
 }
