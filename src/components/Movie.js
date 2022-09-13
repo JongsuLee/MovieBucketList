@@ -1,0 +1,28 @@
+import React from 'react'
+import './Movie.css'
+
+
+const Movie = (props) => {
+  const baseUrl = 'https://image.tmdb.org/t/p/original/';
+  const movie = props.object;
+  console.log(movie)
+  console.log(movie.title)
+
+  return (
+    <div className='movie'>
+        {/* poster */}
+        <div className='poster-frame'>
+          <img className='poster' src={`${baseUrl}${movie.poster_path}`}/>
+        </div>
+        {/* title(ko + en) */}
+        <div className='title'>
+          <div className='title-ko'>{movie?.title || movie?.name}</div>
+          <div className='title-en'>{movie?.original_title || movie?.original_name}</div>
+        </div>
+        {/* release date */}
+        <div className='release-date'>{movie?.release_date || movie?.first_air_date}</div>
+    </div>
+  )
+}
+
+export default Movie

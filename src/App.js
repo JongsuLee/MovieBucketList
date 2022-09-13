@@ -1,7 +1,7 @@
-import logo from './logo.svg';
 import {useEffect, useState} from 'react';
 import './App.css';
 import requests from './request';
+import MovieList from './components/MovieList';
 
 function App() {
   const [movies, setMovies] = useState([]);
@@ -19,24 +19,30 @@ function App() {
   }, []);
 
   const onClickHandler = (event) => {
-    const movie = event.target;
-    console.dir(movie);
+    const movieId = Number(event.target.parentElement.id);
+    for (let movie of movies) {
+      if (movie.id === movieId) setBuckets(buckets.add(movie));  
+    }
+    console.log(buckets)
   }
 
   // console.log(movieList[2]);
   return (
     <div className="App">
       {/* MovieList */}
-        {movies.map(movie => {
+        {/* {movies.map(movie => {
           return (
-            <div key={movie.id} onClick={onClickHandler}>
+            <div key={movie.id} onClick={onClickHandler} id={movie.id}>
               <div>{movie.title}</div>
               <div>{movie.original_title}</div>
             </div>
           );
-        })}
+        })} */}
       {/* BucketList */}
 
+      <MovieList movieList={movies}/>
+      {/* BucketList
+      <BucketList /> */}
     </div>
   );
 }
