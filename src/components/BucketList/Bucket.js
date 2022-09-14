@@ -9,8 +9,6 @@ const Bucket = (props) => {
             <label className={`Watched-${checkedWatched}`}>{props.bucket.title}</label>
         </div>
     );
-} 
-
-
+};
 
 export default Bucket;
