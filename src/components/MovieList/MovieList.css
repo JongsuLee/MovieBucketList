@@ -1,7 +1,7 @@
 .movie-list {
   display: grid;
   grid-template-columns: auto auto auto auto;
-  width: 50%;
+  width: 50;
   margin-left: 5%;
   margin-top: 5%;
 }

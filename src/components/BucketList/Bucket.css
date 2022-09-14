@@ -1,0 +1,30 @@
+.Watched-true{
+    text-decoration: line-through;
+}
+
+.Bucket{
+    line-height: 4rem;
+    width: 500px;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+}
+
+input {
+    margin: 5px 10px;
+    width: 30px;
+    height: 30px;
+}
+
+label {
+    font-size: 2rem;
+    margin-left: 10px;
+}
+
+.Bucket-true {
+    background-color: #fffcd7;
+}
+
+.Bucket-false {
+    background-color: #fffaab;
+}

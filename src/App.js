@@ -39,6 +39,7 @@ function App() {
       {/* BucketList */}
       <BucketList bucketList={buckets}/>
     </div>
+    
   );
 }
 

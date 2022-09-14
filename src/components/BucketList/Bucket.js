@@ -1,4 +1,5 @@
 import {useState} from 'react';
+import './Bucket.css'
 
 const Bucket = (props) => {
     const bucket = props.object;
@@ -8,7 +9,7 @@ const Bucket = (props) => {
 
     return (
         // <div>test</div>
-        <div className="Bucket">
+        <div className={`Bucket Bucket-${checkedWatched}`}>
             <input type="checkbox" onChange={checkedWatchedHandler}></input>
             <label className={`Watched-${checkedWatched}`}>{bucket?.title || bucket?.name}</label>
         </div>
