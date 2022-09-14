@@ -5,13 +5,16 @@ import './Movie.css'
 const Movie = (props) => {
   const baseUrl = 'https://image.tmdb.org/t/p/original/';
   const movie = props.object;
-  const onClickHandler = props.onClickHandler;
+
+  const onClickHandler = () => {
+    props.onClickHandler(movie.id);
+  }
 
   return (
-    <div className='movie' onClick={onClickHandler}>
+    <div className='movie' id={movie.id} onClick={onClickHandler}>
         {/* poster */}
         <div className='poster-frame'>
-          <img className='poster' id={movie.id} src={`${baseUrl}${movie.poster_path}`}/>
+          <img className='poster'  src={`${baseUrl}${movie.poster_path}`}/>
         </div>
         {/* title(ko + en) */}
         <div className='title'>

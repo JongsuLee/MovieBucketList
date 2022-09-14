@@ -18,34 +18,20 @@ function App() {
     getMoives();
   }, []);
 
-  const onClickHandler = (event) => {
-    const movieId = Number(event.target.id);
-    console.log(event.target);
+  const onClickHandler = (id) => {
+    const movieId = Number(id);
     for (let movie of movies) {
       if (movie.id === movieId) setBuckets(buckets.add(movie));  
     }
-    console.log(buckets.size)
+    console.log(buckets);
   }
 
-  // console.log(movieList[2]);
+
   return (
     <div className="App">
       {/* MovieList */}
-
       <MovieList movieList={movies} onClickHandler={onClickHandler}/>
       {/* BucketList */}
-      {if (buckets.size > 0) {
-        console.log(buckets.size);
-      }}
-      {buckets.map(bucket => {
-        console.log(bucket)
-        return (
-          <div>
-            <input type='checkbox'/>
-            <label>{bucket.title}</label>
-          </div>
-        );
-      })}
     </div>
   );
 }

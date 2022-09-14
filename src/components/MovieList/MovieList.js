@@ -4,7 +4,9 @@ import './MovieList.css';
 
 const MovieList = (props) => {
   const movieList = props.movieList;
-  const onClickHandler = props.onClickHandler;
+  const onClickHandler = (id) => {
+    props.onClickHandler(id);
+  };
 
   return (
     <div className='movie-list'>
