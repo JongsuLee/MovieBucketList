@@ -1,7 +1,7 @@
 import {useState} from 'react';
 
 const Bucket = (props) => {
-    const bucket = props.object;
+    const bucket = JSON.parse(props.object);
     const [checkedWatched, setCheckedWatched] = useState(false);
 
     const checkedWatchedHandler = () => setCheckedWatched(!checkedWatched);
