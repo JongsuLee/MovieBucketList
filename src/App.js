@@ -6,11 +6,10 @@ import BucketList from './components/BucketList/BucketList';
 
 function App() {
   const [movies, setMovies] = useState([]);
-  const [bucketSet, setBucketSet] = useState(new Set());
+  const [bucketSet, setBucketSet] = useState(new Set([]));
   const [buckets, setBuckets] = useState([]);
 
   const url = 'https://api.themoviedb.org/3';
-  
   useEffect(() => {
     async function getMoives() {
       const response = await fetch(`${url}${requests.fetchTrending}`);  
@@ -24,12 +23,14 @@ function App() {
     const movieId = Number(id);
     for (let movie of movies) {
       if (movie.id === movieId) {
-        setBucketSet(new Set([...buckets, movie]));
-        setBuckets([...bucketSet]);
+        setBucketSet(new Set([...bucketSet, movie]));
+        console.log(bucketSet, 'bs');
       }  
     }
+    console.log(buckets, 'buckets');
+    setBuckets([...bucketSet]);
   }
-
+  
 
   return (
     <div className="App">
