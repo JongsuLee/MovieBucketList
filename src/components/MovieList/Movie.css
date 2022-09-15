@@ -1,13 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Roboto+Condensed:ital,wght@1,300&display=swap');
+
 .movie {
     margin: 20px;
     width: 200px;
     height: 280px;
     text-align: center;
-    border: 1px solid black;
+    border: 2px dashed hsla(272, 89%, 4%, 0.3);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    border-radius: 20px 20px 80px 30px;
+
 }
 
 .movie:hover {
@@ -39,6 +43,8 @@
 
 .title-en {
     font-size: 0.8rem;
+    font-family: 'Playfair Display', serif;
+    font-family: 'Roboto Condensed', sans-serif;
 }
 
 .release-date {

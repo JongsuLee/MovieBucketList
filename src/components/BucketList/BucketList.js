@@ -7,9 +7,8 @@ const BucketList = (props) => {
     return (
         <div className="BucketList">
             <h2>BucketList</h2>
-            {bucketList.map(bucket => {
-                console.log(bucket)
-                return <Bucket key={bucket.id} object={bucket}/>
+            {bucketList.map((bucket, index) => {
+                return <Bucket key={index} object={bucket}/>
             })}
         </div>
     );

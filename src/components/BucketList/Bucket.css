@@ -23,6 +23,7 @@ label {
 
 .Bucket-true {
     background-color: #fffcd7;
+    color: hsla(0, 0%, 33%, 0.3);
 }
 
 .Bucket-false {

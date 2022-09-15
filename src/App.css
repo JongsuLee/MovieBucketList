@@ -10,3 +10,20 @@
   justify-content: space-evenly;
   background-color: #f2e98b;
 }
+
+h1{
+  white-space: pre-line;
+  margin-top: 1rem;
+  text-align: center;
+  margin-left: 1rem;
+  font-size: 3rem;
+  color: hsla(127, 93%, 41%, 0.3);
+  text-shadow: -1px -1px 1px #aaa,
+              0px 2px 1px rgba(0, 0, 0, 0.5),
+              2px 2px 3px rgba(0,0,0,0.7),
+              0px 0px 4px rgba(0,0,0,0.4);
+}
+p{
+  margin-left: 2rem;
+  font-size: 12px;
+}

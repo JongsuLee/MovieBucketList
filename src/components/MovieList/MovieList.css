@@ -2,6 +2,7 @@
   display: grid;
   grid-template-columns: auto auto auto auto;
   width: 50;
-  margin-left: 5%;
   margin-top: 5%;
+  border: 7px double black;
+  background-color: hsla(73, 5%, 70%, 0.3);
 }
