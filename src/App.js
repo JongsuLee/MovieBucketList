@@ -22,19 +22,19 @@ function App() {
     }
     getMoives();
   }, [bucketSet]);
-
+  
   const onClickHandler = (id) => {
     const movieId = Number(id);
     for (let movie of movies) {
       if (movie.id === movieId) {
         const str = JSON.stringify(movie);
-        if (! bucketSet.has(str)) setBucketSet(new Set([...bucketSet, str]));
+        setBucketSet(new Set([...bucketSet, str]));
       }  
     }
   }
   
   const title = 'pickIt \n';
-  const subtitle = '(Pick Your Bucket)';
+  const subtitle = 'Pick Your Bucket';
 
   return (
     <div className="App">
